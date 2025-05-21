@@ -148,6 +148,7 @@ const AboutFogRot = () => {
 
      // Update function to sync Matter.js and DOM
   const update = () => {
+    if (!divRef1.current) return;
     const halfWidth1 = divRef1.current.offsetWidth / 2;
     const halfHeight1 = divRef1.current.offsetHeight / 2;
     divRef1.current.style.transform = `translate(${body5.position.x - halfWidth1}px, ${body5.position.y - halfHeight1}px) rotate(${body5.angle}rad)`;

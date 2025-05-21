@@ -10,14 +10,14 @@ import Link from 'next/link';
 
 export default function ArtworkDetails({ params }){
 var cardIndex = cardData.findIndex(obj => obj.link==params.artworksId);
-// console.log(cardIndex);
+console.log(cardIndex);
 const card = cardData[cardIndex];
 
     return (
         <>
             <main className={styles.main} style={{ backgroundColor: '#a3b5b4' }}>
                 <div className={styles.imgContainer}>
-                     <ImageSlider images={card.images} /> 
+                     <ImageSlider images={card.images} />
                 </div>
                 <div className={styles.titleArtistContainer}>
                     <h1 className={styles.title}>{card.title}</h1>
@@ -32,13 +32,13 @@ const card = cardData[cardIndex];
                 <div className={styles.backToGallery}>
                 ← <Link href={"/WorksInChaos/Artworks"}>back to the gallery</Link>
                 </div>
-            
+
             </main>
-                {/* <h1>art title {params.artworksId}</h1> */}        
+                {/* <h1>art title {params.artworksId}</h1> */}
         {/* <Footer /> */}
         </>
-       
-       
-        );       
-    
+
+
+        );
+
 }

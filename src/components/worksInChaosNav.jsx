@@ -10,9 +10,9 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 const NAV_LIST = [
     // { imgSrc: "/images/dac_icon.png", href: "/" }, // Adjust the path to your actual image location
     { text: "WORKS IN CHAOS", href: "/WorksInChaos" },
+    { text: "Posters", href: "/images/2025artworks/popupshow.png" },
+    { text: "Floorplan", href: "/images/2025artworks/floorplan.png" },
     { icon: faInstagram, href: "https://www.instagram.com/digital_arts_computing/?hl=en", newTab: true }
-    // { text: "Floorplan", href: "/floorplan" }
-    // { text: "Floorplan", href: "/images/floorplan.png" }
     // { text: "FogRot", href: "/fogrot" },
     // { text: "Contact Us", href: "mailto:computing@gold.ac.uk" },
 ];

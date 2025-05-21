@@ -15,8 +15,13 @@ img {
   height: 100vh;
   object-position: center center; 
   object-fit: cover; 
- 
 }
+
+/* Special styles for 2025 images */
+.image-2025 {
+  height: 110vh !important;  /* Using !important to ensure overriding original styles */
+}
+
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
@@ -75,6 +80,7 @@ h3{
   right: 1rem;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
   .left-arrow, .right-arrow{
     font-size: 24px;
@@ -96,7 +102,6 @@ h3{
     height: 100vh;
     object-fit: cover; 
     object-position: center;
-
   }
   h2{
     font-size: 24px;
@@ -107,4 +112,17 @@ h3{
   .visit-page-button{
     font-size: 18px;
   }
+  .image-2025 {
+    height: 70vh !important;
+  }
+}
+
+/* Add these new styles */
+.slide.active[data-year="2025"] ~ header .nav-text-2025 {
+  background: linear-gradient(45deg, #7ef29d, #0ff0b3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }

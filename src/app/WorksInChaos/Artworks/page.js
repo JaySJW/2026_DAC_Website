@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 
-import Cardd from '../../../components/cardd';
+import Cardd from '../../../components/newCardd';
 // import Footer from '../../../components/footer';
 import styles from './artworks.module.css';
 import EditorDetails from '../../../components/editorDetails';
@@ -17,7 +17,7 @@ import cardData from '../../../data/WorksInChaosData/cardData';
 export default function Artworks() {
 //   const animationContainer = useRef(null);
 //   let animationInstance = null;
-//background animation code start 
+//background animation code start
 //   useEffect(() => {
 //     // Ensure lottie and the container ref are available
 //     if (animationContainer.current) {
@@ -37,10 +37,10 @@ export default function Artworks() {
 //         const scrollPosition = window.scrollY;
 //         const scrollMax = document.documentElement.scrollHeight - window.innerHeight+4;
 //         // const scrollMax = document.documentElement.scrollHeight;
-        
+
 //         // Calculate the current frame of the lottie animation
 //         const currentFrame = animationInstance.totalFrames * (scrollPosition / scrollMax);
-        
+
 //         // Go to the calculated frame and stop there
 //         animationInstance.goToAndStop(currentFrame, true);
 //       };
@@ -53,7 +53,7 @@ export default function Artworks() {
 //         window.removeEventListener('scroll', handleScroll);
 //         animationInstance.destroy();
 //       };
-      
+
 //     }
 //   }, []);
 
@@ -62,18 +62,18 @@ export default function Artworks() {
     <>
 
       {/* Full-screen Animation container */}
-      {/* <div 
-        ref={animationContainer} 
+      {/* <div
+        ref={animationContainer}
         style={{
-          position: 'fixed', 
+          position: 'fixed',
           top: 0,
           left: 0,
           width: '100vw',
           height:'100%',
-          zIndex: -1, 
+          zIndex: -1,
         }}
       ></div> */}
-      
+
       <main className="flex min-h-screen flex-col items-center justify-between p-2" style={{ position: 'relative', zIndex: 1, paddingTop:'3rem' }}>
         <div className='content'>
           <div className='left'>
@@ -85,6 +85,7 @@ export default function Artworks() {
               <div className={styles.cardsContainer}>
                 {cardData.map((card, index) => (
                   <Cardd
+                    pageIndex={'WorksInChaos'}
                     className={styles.card}
                     key={index}
                     title={card.title}
@@ -101,20 +102,20 @@ export default function Artworks() {
                   />
                 ))}
               </div>
-            
-     
+
+
           </div>
-         
+
 
         </div>
         <div>
-          <EditorDetails  
-            summary="designed and edited by jade & moni, background by __" 
+          <EditorDetails
+            summary="designed and edited by jade & moni, background by __"
           />
-        </div>   
-      
+        </div>
+
       </main>
-{/*       
+{/*
       <Footer /> */}
     </>
   );
