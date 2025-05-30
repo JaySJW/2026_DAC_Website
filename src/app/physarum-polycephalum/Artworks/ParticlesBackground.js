@@ -40,7 +40,7 @@ export default function ParticlesBackground() {
                     },
                     links: {
                         enable: true,
-                        distance: 150,
+                        distance: 250, // increased distance between connected particles
                         color: "#66ccff", // white connection line
                         opacity: 0.5, 
                         width: 1.5, // thin line
@@ -56,7 +56,7 @@ export default function ParticlesBackground() {
                         density: {
                             enable: true,
                         },
-                        value: 150, // decrease the number of particals
+                        value: 50, // reduced number of particles from 150 to 50
                     },
                     shape: {
                         type: "circle", // shape

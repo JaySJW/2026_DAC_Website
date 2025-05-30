@@ -217,7 +217,7 @@ const OrganicBackground = () => {
         get x() { return leftX + Math.cos(Date.now() * 0.001 + 1) * 18; },
         get y() { return navYs[1] + Math.sin(Date.now() * 0.001 + 1) * 12; },
         radius: navRadius,
-        text: 'Public Program',
+        text: 'Panel Talk',
         link: '/physarum-polycephalum/PublicProgram',
         isHovered: false,
         update: function() {},
