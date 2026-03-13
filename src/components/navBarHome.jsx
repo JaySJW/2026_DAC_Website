@@ -46,11 +46,11 @@ const NavBarHome = ({ currentSlide }) => {
       </header>
       {is2025Slide && (
         <div className="exhibition-info">
-          <p className="date">22nd - 25th May</p>
-          <p className="opening">Opening Thur 22nd - 6pm to 10pm</p>
-          <p className="hours">23rd - 25th - From 11am</p>
-          <p className="duration">26 hr</p>
-          <p className="location">The Ugly Duck, Bermondsey, SE1 3PL</p>
+          <p className="date">30th Apr - 3rd May</p>
+          <p className="opening">Opening: Thur 30th Apr</p>
+          <p className="hours">  </p>
+          <p className="duration">  </p>
+          <p className="location">Hatcham Church Hall, St James's SE14 6AD</p>
         </div>
       )}
     </>

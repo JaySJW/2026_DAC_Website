@@ -52,6 +52,7 @@ body {
   z-index: 1000;
   align-items: center;
   justify-content: space-between;
+  background: transparent;
 }
 .nav-icon {
   width: 50px; /* Adjust the width as needed */

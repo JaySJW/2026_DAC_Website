@@ -11,6 +11,16 @@ import '../styles/home.css';
 
 const slides = [
   {
+    image: '/images/HomePageImages/2026_HiddenVein/WIP_PosterFront_web.PNG',
+    title: ' 2026 Degree Show: HiddenVein',
+    secondaryTitle: '2026 Degree Show',
+    buttons: [
+      { text: 'Degree Show', link: '/2026_Final_HiddenVein' },
+      { text: 'WIP Show', link: '/2026_WIP_uncertain' },
+    ],
+    className: 'image-2025'
+  },
+  {
     image: '/images/HomePageImages/physarum-polycephalum/background 2.PNG',
     title: ' 2025 Degree Show :physarum-polycephalum',
     secondaryTitle: '2025 WIP Show',
@@ -23,6 +33,7 @@ const slides = [
   {
     image: '/images/HomePageImages/FogRot2024/IMG_8606.JPG',
     title: 'Fog Rot',
+    
     secondaryTitle: '2024 Degree Show',
     buttons: [
       { text: 'Visit Page', link: '/FogRot2024' },
