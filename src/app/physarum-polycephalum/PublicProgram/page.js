@@ -256,7 +256,7 @@ const PanelTalkPage = () => {
             ×
           </button>
           <img 
-            src={`/images/2025artworks/physarum-polycephalum/panel%20${galleryType}/gallery/${enlargedPhoto}`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel%20${galleryType}/gallery/${enlargedPhoto}`}
             alt="Enlarged photo"
             style={{
               maxWidth: '90%',
@@ -340,7 +340,7 @@ const PanelTalkPage = () => {
               onClick={() => setEnlargedPhoto(photo)}
               >
                 <img 
-                  src={`/images/2025artworks/physarum-polycephalum/panel%20${galleryType}/gallery/${photo}`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel%20${galleryType}/gallery/${photo}`}
                   alt={`${galleryType === 'talk' ? 'Panel Talk' : 'Guided Tour'} Photo ${index + 1}`}
                   style={{
                     width: '100%',
@@ -415,7 +415,7 @@ const PanelTalkPage = () => {
             width: '100%',
             height: '100%',
             borderRadius: '50%',
-            backgroundImage: `url(/images/2025artworks/physarum-polycephalum/panel%20talk/gallery/${talkPhotos[currentPhotoIndex]})`,
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel%20talk/gallery/${talkPhotos[currentPhotoIndex]})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.8,
@@ -491,7 +491,7 @@ const PanelTalkPage = () => {
             width: '100%',
             height: '100%',
             borderRadius: '50%',
-            backgroundImage: `url(/images/2025artworks/physarum-polycephalum/panel%20tour/gallery/${tourPhotos[currentTourPhotoIndex]})`,
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel%20tour/gallery/${tourPhotos[currentTourPhotoIndex]})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.8,

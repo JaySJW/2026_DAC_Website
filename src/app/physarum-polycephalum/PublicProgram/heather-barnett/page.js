@@ -136,7 +136,7 @@ const HeatherBarnettPage = () => {
             marginBottom: '2rem' 
           }}>
             <img 
-              src="/images/2025artworks/physarum-polycephalum/panel talk/HeatherBarnett_col.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel talk/HeatherBarnett_col.jpg`}
               alt="Heather Barnett"
               style={{
                 width: '300px',

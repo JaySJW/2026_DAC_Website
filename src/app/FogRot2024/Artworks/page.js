@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -27,7 +26,7 @@ export default function Artworks() {
           renderer: 'svg',
           loop: false,
           autoplay: false,
-          path: '../jsonAnims/fogrot.json',
+          path: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/jsonAnims/fogrot.json`,
           rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'
           },

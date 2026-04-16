@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 
 import Cardd from '../../../components/newCardd';

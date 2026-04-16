@@ -56,7 +56,7 @@ export default function ArtworkPage({ params }) {
         }}>
           {images.length > 0 && (
             <img
-              src={images[imgIdx]}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${images[imgIdx]}`}
               alt={artwork.title}
               style={{
                 width: '100%',

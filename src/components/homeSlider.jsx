@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './homeSlider.css'; 
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const HomeSlider = ({ slides, onSlideChange }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -41,9 +43,9 @@ const HomeSlider = ({ slides, onSlideChange }) => {
         >
           {index === current && (
             <div>
-              <img 
-                src={slide.image} 
-                alt={slide.title} 
+              <img
+                src={`${bp}${slide.image}`}
+                alt={slide.title}
                 className={slide.className}
               />       
               <div className="info">

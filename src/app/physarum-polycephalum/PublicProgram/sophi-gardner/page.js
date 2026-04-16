@@ -136,7 +136,7 @@ const SophiGardnerPage = () => {
             marginBottom: '2rem' 
           }}>
             <img 
-              src="/images/2025artworks/physarum-polycephalum/panel talk/Sophi_in_the_studio.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel talk/Sophi_in_the_studio.png`}
               alt="Sophi Gardner in the studio"
               style={{
                 width: '300px',

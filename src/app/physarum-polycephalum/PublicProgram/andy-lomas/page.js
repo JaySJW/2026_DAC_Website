@@ -136,7 +136,7 @@ const AndyLomasPage = () => {
             marginBottom: '2rem' 
           }}>
             <img 
-              src="/images/2025artworks/physarum-polycephalum/panel talk/andylomas_pic_crop_bw_1.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/2025artworks/physarum-polycephalum/panel talk/andylomas_pic_crop_bw_1.jpg`}
               alt="Andy Lomas"
               style={{
                 width: '300px',

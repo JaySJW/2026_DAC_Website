@@ -41,7 +41,7 @@ const AboutFogRot = () => {
         width: cw,
         height: ch,
         wireframes: false,
-        background: 'url("/images/rabbit.png")'
+        background: `url("${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/rabbit.png")`
         // backgroundImage: 'url("public/images/0001.png")', // Ensure this is a valid URL and wrapped in url()
         //backgroundRepeat: 'repeat', // Set as a string
         // backgroundSize: 'auto'
@@ -232,7 +232,7 @@ const AboutFogRot = () => {
           render: {
             // fillStyle: '#0000ff',
             sprite: {
-              texture: '/images/favicon_io/apple-touch-icon.png',
+              texture: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/favicon_io/apple-touch-icon.png`,
               xScale: radius / baseSize, // Adjust these based on your needs
               yScale: radius / baseSize
           } 

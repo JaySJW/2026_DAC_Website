@@ -14,13 +14,15 @@ const NAV_LIST = [
     // { text: "Contact Us", href: "mailto:computing@gold.ac.uk" },
 ];
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const NavBar = () => {
 
   return (
     <header className="sticky-navbar">
     {NAV_LIST.map((item, index) => (
       <NavItem key={index} href={item.href} active={item.active}>
-        {item.imgSrc ? <img src={item.imgSrc} alt="Home" className="nav-icon" /> : item.text}
+        {item.imgSrc ? <img src={`${bp}${item.imgSrc}`} alt="Home" className="nav-icon" /> : item.text}
       </NavItem>
     ))}
     </header>

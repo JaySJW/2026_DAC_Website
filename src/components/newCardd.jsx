@@ -5,13 +5,15 @@ import Link from "next/link";
 import React from 'react';
 import './cardd.css';
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Cardd = ({pageIndex ,title, artistName, description, keywords, images, link, socialLink, socialText, socialLink2, socialText2 }) => {
   return (
     <div className="card">
        <Link href={`/${pageIndex}/Artworks/${encodeURIComponent(link)}`} className="card-link" rel="noopener noreferrer">
         <div className="imgContainer">
           {images && images.length > 0 && (
-            <img src={images[0]} alt="Card image" />
+            <img src={`${bp}${images[0]}`} alt="Card image" />
           )}
         </div>
 

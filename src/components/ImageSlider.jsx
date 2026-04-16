@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ImageSlider.css'; // Make sure to create this CSS file
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,7 +20,7 @@ const ImageSlider = ({ images }) => {
 
   return (
     <div className="slider">
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
+      <img src={`${bp}${images[currentIndex]}`} alt={`Slide ${currentIndex}`} />
       <div className="buttons-container">
         <button onClick={goToPrev}>Prev</button>
         <button onClick={goToNext}>Next</button>

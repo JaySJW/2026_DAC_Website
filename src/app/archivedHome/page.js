@@ -38,7 +38,7 @@ export default function Home() {
           renderer: 'svg',
           loop: false,
           autoplay: false,
-          path: 'jsonAnims/fogrot.json',
+          path: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/jsonAnims/fogrot.json`,
           rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'
           },
@@ -137,7 +137,7 @@ export default function Home() {
                   xxxxx/xxx/xxx/  ssssssdhdjdj
             </div> */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <img src="/images/FogRotZine.jpg" alt="zine cover" style={{ marginRight: '10px', width: '100%' }} />
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/FogRotZine.jpg`} alt="zine cover" style={{ marginRight: '10px', width: '100%' }} />
               <Link href="https://online.fliphtml5.com/tljyw/cccr/#p=1" target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>
                 Read our Zine online
               </Link>

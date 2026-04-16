@@ -84,7 +84,7 @@ export default function AboutPage() {
               onClick={() => setZoomImg(imgIdx)}
             >
               <img
-                src={images[imgIdx]}
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${images[imgIdx]}`}
                 alt={`about${imgIdx}`}
                 style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', borderRadius: 40, display: 'block', margin: 'auto' }}
               />
@@ -130,7 +130,7 @@ export default function AboutPage() {
           }}
         >
           <img
-            src={images[zoomImg]}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${images[zoomImg]}`}
             alt={`about${zoomImg}`}
             style={{
               maxWidth: '90vw',
