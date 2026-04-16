@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import lottie from 'lottie-web';
 import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -32,41 +31,33 @@ export default function Home() {
   let animationInstance = null;
 
   useEffect(() => {
-    // Ensure lottie and the container ref are available
     if (animationContainer.current) {
-      animationInstance = lottie.loadAnimation({
-        container: animationContainer.current, // the dom element that will contain the animation
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        path: 'jsonAnims/fogrot.json',
-        rendererSettings: {
-          // preserveAspectRatio: 'none' // This will stretch the animation to fill the container
-          preserveAspectRatio: 'xMidYMid slice'
-        },
+      import('lottie-web').then(({ default: lottie }) => {
+        animationInstance = lottie.loadAnimation({
+          container: animationContainer.current,
+          renderer: 'svg',
+          loop: false,
+          autoplay: false,
+          path: 'jsonAnims/fogrot.json',
+          rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+          },
+        });
+
+        const handleScroll = () => {
+          const scrollPosition = window.scrollY;
+          const scrollMax = document.documentElement.scrollHeight - window.innerHeight + 3;
+          const currentFrame = animationInstance.totalFrames * (scrollPosition / scrollMax);
+          animationInstance.goToAndStop(currentFrame, true);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+          animationInstance.destroy();
+        };
       });
-
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const scrollMax = document.documentElement.scrollHeight - window.innerHeight+3;
-        // const scrollMax = document.documentElement.scrollHeight;
-        
-        // Calculate the current frame of the lottie animation
-        const currentFrame = animationInstance.totalFrames * (scrollPosition / scrollMax);
-        
-        // Go to the calculated frame and stop there
-        animationInstance.goToAndStop(currentFrame, true);
-      };
-
-      // Add event listener for scroll
-      window.addEventListener('scroll', handleScroll);
-
-      // Clean up function
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        animationInstance.destroy();
-      };
-      
     }
   }, []);
 
